@@ -83,8 +83,8 @@ a:hover { color: var(--accent); }
 
 .hero-inner {
     display: grid;
-    grid-template-columns: 1fr 220px;
-    gap: 48px;
+    grid-template-columns: 1fr 420px;
+    gap: 64px;
     align-items: center;
 }
 
@@ -123,14 +123,15 @@ a:hover { color: var(--accent); }
 }
 
 .avatar-mask {
-    width: 220px;
-    height: 220px;
+    width: 360px;
+    height: 360px;
     border-radius: 50%;
     object-fit: cover;
     border: 3px solid var(--border);
-    box-shadow: 0 0 40px rgba(63, 185, 80, 0.15);
+    box-shadow: 0 0 60px rgba(63, 185, 80, 0.2);
     transition: all 0.3s ease;
     display: block;
+    margin: 0 auto;
 }
 .avatar-mask:hover {
     border-color: var(--accent);
@@ -139,18 +140,18 @@ a:hover { color: var(--accent); }
 }
 
 /* Адаптив */
-@media (max-width: 860px) {
+@media (max-width: 1000px) {
     .hero-inner {
         grid-template-columns: 1fr;
-        gap: 32px;
+        gap: 40px;
         text-align: center;
     }
     .hero-photo { order: -1; }
     .hero-actions { justify-content: center; }
-    .avatar-mask { width: 160px; height: 160px; }
+    .avatar-mask { width: 280px; height: 280px; }
 }
 @media (max-width: 600px) {
-    .avatar-mask { width: 130px; height: 130px; }
+    .avatar-mask { width: 180px; height: 180px; }
 }
 
 /* ============ КНОПКИ ============ */
