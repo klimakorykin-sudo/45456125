@@ -1,4 +1,3 @@
-﻿/* ============ БАЗА ============ */
 * { margin: 0; padding: 0; box-sizing: border-box; }
 
 :root {
@@ -367,4 +366,62 @@ a:hover { color: var(--accent); }
     .contact-item { flex-direction: column; align-items: flex-start; gap: 4px; }
     .skill-group { flex-direction: column; gap: 4px; }
     .skill-label { min-width: 0; }
+}
+/* ============ ГЕРОЙ С ФОТО ============ */
+.hero-inner {
+    display: grid;
+    grid-template-columns: 1fr auto;
+    gap: 48px;
+    align-items: center;
+}
+
+.hero-text { min-width: 0; }
+
+.hero-photo {
+    flex-shrink: 0;
+}
+
+.avatar-mask {
+    width: 220px;
+    height: 220px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 3px solid var(--border);
+    box-shadow: 0 0 40px rgba(63, 185, 80, 0.15);
+    transition: all 0.3s ease;
+    display: block;
+}
+
+.avatar-mask:hover {
+    border-color: var(--accent);
+    box-shadow: 0 0 60px rgba(63, 185, 80, 0.3);
+    transform: scale(1.03);
+}
+
+/* Адаптив */
+@media (max-width: 860px) {
+    .hero-inner {
+        grid-template-columns: 1fr;
+        text-align: center;
+        gap: 32px;
+    }
+    .hero-photo {
+        order: -1;
+        display: flex;
+        justify-content: center;
+    }
+    .hero-actions {
+        justify-content: center;
+    }
+    .avatar-mask {
+        width: 160px;
+        height: 160px;
+    }
+}
+
+@media (max-width: 600px) {
+    .avatar-mask {
+        width: 130px;
+        height: 130px;
+    }
 }
